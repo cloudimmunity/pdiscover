@@ -6,5 +6,6 @@ here="$(dirname "$BASH_SOURCE")"
 cd $here
 source env.sh
 cd _vendor
+go get github.com/cloudimmunity/pdiscover
 
 

@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-    "pdiscover"
+    "github.com/cloudimmunity/pdiscover"
 )
 
 func main() {
