@@ -1,10 +1,10 @@
 package pdiscover
 
 import (
-	"error"
+	"errors"
 )
 
 var (
-	ErrInvalidProcArgsLen = error.New("invalid ProcArgs length")
-	ErrInvalidProcInfo    = error.new("invalid proc info")
+	ErrInvalidProcArgsLen = errors.New("invalid ProcArgs length")
+	ErrInvalidProcInfo    = errors.new("invalid proc info")
 )
