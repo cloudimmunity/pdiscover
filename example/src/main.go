@@ -6,6 +6,11 @@ import (
 )
 
 func main() {
+    exePath, err := pdiscover.GetOwnProcPath()
+    if err != nil {
+        log.Fata(err)
+    }
+    
 	watcher, err := pdiscover.NewAllWatcher(pdiscover.PROC_EVENT_ALL)
     if err != nil {
         log.Fatal(err)
