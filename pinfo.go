@@ -6,5 +6,5 @@ import (
 
 var (
 	ErrInvalidProcArgsLen = errors.New("invalid ProcArgs length")
-	ErrInvalidProcInfo    = errors.new("invalid proc info")
+	ErrInvalidProcInfo    = errors.New("invalid proc info")
 )

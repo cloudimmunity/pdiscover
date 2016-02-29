@@ -66,3 +66,18 @@ func getSysCtlInfo(name []int32,value *byte,valueLen *uintptr) error {
 
 	return nil
 }
+
+func GetProcInfo(pid int) map[string]string {
+	return nil
+}
+
+func exePathFromProcArgs(raw []byte) string {
+	for i, byteVal := range raw {
+		if byteVal == 0 {
+			return string(raw[:i])
+		}
+	}
+	
+	return ""
+}
+

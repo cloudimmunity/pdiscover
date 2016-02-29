@@ -2,14 +2,17 @@ package main
 
 import (
 	"log"
+
     "github.com/cloudimmunity/pdiscover"
 )
 
 func main() {
     exePath, err := pdiscover.GetOwnProcPath()
     if err != nil {
-        log.Fata(err)
+        log.Fatal(err)
     }
+
+    log.Println("exePath:",exePath)
     
 	watcher, err := pdiscover.NewAllWatcher(pdiscover.PROC_EVENT_ALL)
     if err != nil {

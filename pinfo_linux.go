@@ -39,15 +39,12 @@ func GetProcInfo(pid int) map[string]string {
 	return fields
 }
 
-func GetOwnProcPath() string {
+func GetOwnProcPath() (string,error) {
 	return os.Readlink("/proc/self/exe")
 }
 
 func GetProcPath(pid int) (string,error) {
-	procInfo, err := GetProcInfo(pid)
-	if err != nil {
-		return "",nil
-	}
+	procInfo := GetProcInfo(pid)
 
 	if procInfo == nil {
 		return "",ErrInvalidProcInfo
